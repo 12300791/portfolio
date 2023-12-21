@@ -6,7 +6,7 @@
     <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@200&family=Roboto+Slab:wght@100&family=Saira+Extra+Condensed:wght@300&family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <link rel="stylesheet" href="cv.css">
+    <link rel="stylesheet" href="Home.css">
 </head>
 <body>
 <header>
@@ -20,13 +20,14 @@
                     </a>
                     </div>
                     <div><a href="cv.html">
-                        <li><i class="fa-solid fa-user"></i></li>
-                        <p>curriculum vitae</p>
+                        <li><i class="fa-solid fa-file"></i></li>
+                        <p id="full">Curriculum Vitae</p>
+                        <p id="afk">CV</p>
                     </a>
                     </div>
-                    <div><a href="#">
-                        <li><i class="fa-solid fa-phone"></i></li>
-                        <p>Contact</p>
+                    <div><a href="contact.html">
+                        <li><i class="fa-solid fa-user"></i></li>
+                        <p>Info</p>
                     </a>
                     </div>
                     <div><a href="#">
@@ -44,9 +45,99 @@
         <div class="main__container-info">
             <img src="IMG_20231219_133725.jpg"/>
             <p>Bosmans Sven</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Taal</th>
+                        <th>Kennis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nederlands</td>
+                        <td><input type="range" disabled value="4" max="5"></td>
+                    </tr>
+                    <tr>
+                        <td>Engels</td>
+                        <td><input type="range" disabled value="4" max="5"></td>
+                    </tr>
+                    <tr>
+                        <td>Duits</td>
+                        <td><input type="range" disabled value="1" max="5"></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <div class="main__container-about">
+        <div class="main__container-cv">
+            <div class="main__container-werk">
+                <h1>Werkervaring</h1>
+                <ul>
+                    <div class="main__container-werk__nr1">
+                    <li>
+                        <strong>Functie:</strong> Fruitplukker<br>
+                        <strong>Bedrijf:</strong> Vanstrealen<br>
+                        <strong>Periode:</strong> Zomer 2016<br>
+                        <strong>Beschrijving:</strong> Kersen plukken
+                    </li>
+                    <li>
+                        <strong>Functie:</strong> Shopping Tools-medewerker<br>
+                        <strong>Bedrijf:</strong> IKEA<br>
+                        <strong>Periode:</strong> April 2017<br>
+                        <strong>Beschrijving:</strong> Parking opruimen
+                    </li>
+                    <li>
+                        <strong>Functie:</strong> Ober/Barman<br>
+                        <strong>Bedrijf:</strong> Het Voorste Huis<br>
+                        <strong>Periode:</strong> Zomer 2017<br>
+                        <strong>Beschrijving:</strong> Dranken klaarmaken en serveren
+                    </li>
+                    </div>
+                    <div class="main__container-werk__nr2">
+                        <li>
+                            <strong>Functie:</strong> Winkelmedewerker/Magazijnier<br>
+                            <strong>Bedrijf:</strong> Bidfood Bestfood<br>
+                            <strong>Periode:</strong> December 2016 tot november 2018<br>
+                            <strong>Beschrijving:</strong>  Kassa en orderpick
+                        </li>
+                        <li>
+                            <strong>Functie:</strong> Winkelbediende<br>
+                            <strong>Bedrijf:</strong> Colruyt<br>
+                            <strong>Periode:</strong> Doorlopend<br>
+                            <strong>Beschrijving:</strong> Kassa en aanvullen
+                        </li>
+                    </div>
+                </ul>
+            </div>
+            <div class="main__container-studie">
+                <h1>Studies</h1>
+                <ul>
+                    <div class="main__container-studie__nr1">
+                        <li>
+                            <strong>School:</strong> Sint-Franciscus College<br>
+                            <strong>Richting:</strong> Moderne Wetenschappen<br>
+                            <strong>Periode:</strong> September 2012 tot Juni 2013
+                        </li>
+                        <li>
+                            <strong>School:</strong> Spectrum College<br>
+                            <strong>Richting:</strong> Techniek-Wetenschappen<br>
+                            <strong>Periode:</strong> September 2013 tot Juni 2015
+                        </li>
+                    </div>
+                    <div class="main__container-studie__nr2">
+                        <li>
+                            <strong>School:</strong> VTI Hasselt/Campus HAST<br>
+                            <strong>Richting:</strong> Chemie<br>
+                            <strong>Periode:</strong> September 2016 tot Juni 2017
+                        </li>
+                        <li>
+                            <strong>School:</strong> Spectrum College<br>
+                            <strong>Richting:</strong> Deeltijds handel<br>
+                            <strong>Periode:</strong> September 2017 tot Februari 2020
+                        </li>
+                    </div>
+                </ul>
 
+            </div>
         </div>
     </div>
 </main>

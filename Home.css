@@ -2,14 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #708090;
+
 }
 body{
     display: flex;
+    background-color: #708090;
 }
 nav {
-    background-color: #666666;
-    width: 6vw;
+    min-width: 4rem;
 }
 .nav__container{
     display: flex;
@@ -19,9 +19,12 @@ nav {
     color: red;
     font-family: 'Oswald', sans-serif;
     font-size: 1.2rem;
+    position: fixed;
+    width: 6vw;
+    min-width: 4rem;
 }
-.nav__container-options ul, li, i, ul p{
-    background-color: #666666;
+.nav__container-options, .nav__container-options ul, li, i, ul p{
+    min-width: 4rem;
 }
 .nav__container-options{
     text-align: center;
@@ -39,30 +42,136 @@ nav {
     text-decoration: none;
     color: red;
 }
+#afk{
+    display: none;
+}
 main{
     height: 100vh;
 }
 .main__container{
     display: flex;
+    height: 100vh;
 }
 .main__container-info{
-    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    min-width: 15rem;
+    height: 100vh;
     text-align: center;
     font-size: 2rem;
-    margin-top: 4rem;
+    position: fixed;
+    left: 6vw;
 }
 .main__container-info img{
     width: 75%;
 }
-.main__container-about{
-    width: 64vw;
+.main__container-info img:hover{
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+table{
+    margin: 0.5rem 0;
+    width: 75%;
+    border-collapse: collapse;
+}
+table tbody tr td input{
+    background-color: #708090;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    outline: none;
+    border-radius: 10px;
+    margin: 0.5rem 0;
+}
+table tbody tr td input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 1rem;
+    height: 1rem;
+    background-color: #787E82;
+    border-radius: 0.6rem;
+}
+table thead{
+    background-color: #AAB2B8;
+}
+thead{
+    font-size: 1.5rem;
+}
+tbody{
+    font-size: 1rem;
+}
+tbody tr:nth-child(odd){
+    background-color: lightgray;
+}
+tbody tr:nth-child(even){
+    background-color: ghostwhite;
+}
+.main__container-extra{
+    justify-content: center;
+    width: 60vw;
+    min-width: 30rem;
     text-align: center;
+    margin: 0 0 0 30vw;
 }
-.main__container-about h1{
-    font-size: 8rem;
+.main__container-extra h1{
+    font-size: 5rem;
 }
-.main__container-about p{
-    font-size: 2.5rem;
+.main__container-extra p{
+    font-size: 2rem;
     margin: 1rem;
+}
+.main__container-cv{
+    justify-content: center;
+    width: 50vw;
+    min-width: 30rem;
+    text-align: center;
+    margin: 0 0 0 40vw;
+}
+.main__container-cv h1{
+    font-size: 5rem;
+}
+.main__container-cv p{
+    font-size: 2rem;
+    margin: 1rem;
+}
+.main__container-werk__nr1, .main__container-werk__nr2, .main__container-studie__nr1, .main__container-studie__nr2 {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 2rem 0.5rem 0.5rem 0.5rem;
+}
+.main__container-cv ul{
+    list-style: none;
+    font-size: 1.5rem;
+}
+.main__container-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    min-width: 30rem;
+    text-align: center;
+    margin: 0 0 0 30vw;
+}
+.main__container-contact ul{
+    list-style: none;
+    font-size: 2rem;
+}
 
+@media screen and (max-width: 78rem) {
+    .nav__container{
+        min-width: 4rem;
+    }
+    #full{
+        display: none;
+    }
+    #afk{
+        display: inline-block;
+        width: 6vw;
+    }
+    .main__container-info{
+        left: 4rem;
+    }
 }
