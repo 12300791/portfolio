@@ -5,7 +5,6 @@
 
 }
 body{
-    display: flex;
     background-color: #708090;
 }
 nav {
@@ -14,7 +13,7 @@ nav {
 .nav__container{
     display: flex;
     align-items: center;
-    min-height: 100vh;
+    min-height: 97vh;
     background-color: #666666;
     color: red;
     font-family: 'Oswald', sans-serif;
@@ -46,7 +45,7 @@ nav {
     display: none;
 }
 main{
-    height: 100vh;
+    height: 97vh;
 }
 .main__container{
     display: flex;
@@ -59,7 +58,7 @@ main{
     justify-content: center;
     width: 20vw;
     min-width: 15rem;
-    height: 100vh;
+    height: 97vh;
     text-align: center;
     font-size: 2rem;
     position: fixed;
@@ -158,6 +157,19 @@ tbody tr:nth-child(even){
 .main__container-contact ul{
     list-style: none;
     font-size: 2rem;
+}
+footer{
+    position: fixed;
+    background-color: #666666;
+    width: 100vw;
+    height: 4vh;
+}
+.footer__container{
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center
 }
 
 @media screen and (max-width: 78rem) {
