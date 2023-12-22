@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
 
 }
 body{
@@ -16,15 +17,11 @@ nav {
     min-height: 97vh;
     background-color: #666666;
     color: red;
-    font-family: 'Oswald', sans-serif;
     font-size: 1.2rem;
     position: fixed;
     width: 6vw;
-    min-width: 4rem;
 }
-.nav__container-options, .nav__container-options ul, li, i, ul p{
-    min-width: 4rem;
-}
+
 .nav__container-options{
     text-align: center;
 }
@@ -49,7 +46,6 @@ main{
 }
 .main__container{
     display: flex;
-    height: 100vh;
 }
 .main__container-info{
     display: flex;
@@ -57,8 +53,7 @@ main{
     align-items: center;
     justify-content: center;
     width: 20vw;
-    min-width: 15rem;
-    height: 97vh;
+    height: 100vh;
     text-align: center;
     font-size: 2rem;
     position: fixed;
@@ -70,6 +65,10 @@ main{
 .main__container-info img:hover{
     box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
     width: 100%;
+}
+.main__container-info img:active{
+    border: 0.5rem double black ;
+    box-shadow: none;
 }
 table{
     margin: 0.5rem 0;
@@ -107,26 +106,32 @@ tbody tr:nth-child(odd){
 tbody tr:nth-child(even){
     background-color: ghostwhite;
 }
+.main__container-talenkennis{
+    display: none;
+}
+.main__container-talenkennis ul{
+    list-style: none;
+}
 .main__container-extra{
     justify-content: center;
     width: 60vw;
-    min-width: 30rem;
     text-align: center;
     margin: 0 0 0 30vw;
+    box-sizing: border-box;
 }
 .main__container-extra h1{
     font-size: 5rem;
 }
 .main__container-extra p{
     font-size: 2rem;
-    margin: 1rem;
+    padding-bottom: 2rem;
 }
 .main__container-cv{
     justify-content: center;
     width: 50vw;
-    min-width: 30rem;
     text-align: center;
-    margin: 0 0 0 40vw;
+    margin: 0 0 0 30vw;
+
 }
 .main__container-cv h1{
     font-size: 5rem;
@@ -144,25 +149,24 @@ tbody tr:nth-child(even){
 .main__container-cv ul{
     list-style: none;
     font-size: 1.5rem;
+    padding-bottom: 2rem;
 }
 .main__container-contact {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60vw;
-    min-width: 30rem;
+    width: 50vw;
     text-align: center;
     margin: 0 0 0 30vw;
 }
 .main__container-contact ul{
     list-style: none;
     font-size: 2rem;
+    padding-bottom: 2rem;
 }
 footer{
     position: fixed;
     background-color: #666666;
     width: 100vw;
-    height: 4vh;
+    height: 6vh;
 }
 .footer__container{
     margin: 0 1rem;
@@ -186,4 +190,81 @@ footer{
     .main__container-info{
         left: 4rem;
     }
+}
+
+@media screen and (max-width: 500px) {
+    .nav__container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 8vh;
+        min-height: unset;
+        justify-content: center;
+    }
+
+    .nav__container ul {
+        display: flex;
+        margin-top: -1rem;
+        width: 60vw;
+        justify-content: space-between;
+    }
+
+    .nav__container li {
+        display: block;
+    }
+
+    .main__container {
+        margin-top: 8vh;
+        display: block;
+        margin-bottom: 3rem;
+    }
+
+    .main__container-info {
+        height: 10rem;
+        margin-top: 16rem;
+        left: 0;
+        width: 90vw;
+        position: static;
+    }
+
+    .main__container-info img:hover {
+        width: 75%;
+    }
+    .main__container-cv{
+        margin: 18rem auto 3rem auto;
+        align-content: center;
+    }
+    .main__container-extra, .main__container-studie, .main__container-contact{
+        margin: 12rem auto 3rem auto;
+        align-content: center;
+    }
+    .main__container-extra h1, .main__container-cv h1{
+        font-size: 3.5rem;
+    }
+    table{
+        display: none;
+    }
+    .main__container-talenkennis{
+        display: flex;
+    }
+    .main__container-werk__nr1, .main__container-werk__nr2, .main__container-studie__nr1, .main__container-studie__nr2 {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .main__container-studie{
+        margin-top: -1rem;
+    }
+    .main__container-cv li{
+        margin-top: 1rem;
+    }
+    .main__container-contact{
+        justify-content: center;
+    }
+    footer{
+        bottom: 0;
+        height: 2rem;
+    }
+
 }
